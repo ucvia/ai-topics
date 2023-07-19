@@ -1,0 +1,168 @@
+\documentclass[11pt, a4paper]{article}
+%\usepackage{geometry}
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{T\'opicos en Inteligencia Artificial (6329)} }
+%\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\today} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{verbatim} % used to display code
+\usepackage{fancyvrb}
+\usepackage{acronym}
+\usepackage{amsthm}
+\usepackage{biblatex}
+
+\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+
+
+
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{lightlightgray}{gray}{0.93}
+
+
+
+\lstset{
+%language=bash,                          % Code langugage
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+numbers=left,                           % Line nums position
+numberstyle=\tiny,                      % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray}, % Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+captionpos=t,                           % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+\bibliography{ref}
+\usepackage{booktabs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\title{Plantilla para nota informativa}
+\begin{center}
+{\Large \textsc{Universidad Central de Venezuela \\
+Facultad de Ciencias\\ 
+Escuela de Computaci\'on\\
+T\'opicos en Inteligencia Artificial\\
+(6329)}}
+\end{center}
+\begin{center}
+I-2023
+\end{center}
+%\date{September 26, 2014}
+
+\begin{center}
+\rule{6in}{0.4pt}
+\begin{minipage}[t]{.75\textwidth}
+\begin{tabular}{llcccll}
+\textbf{Instructor:} & Wilmer Gonzalez & & &  & \textbf{Horario:} & Mier, Viernes @ 11am-1pm \\
+\textbf{Email:} &  \href{mailto:wilmer.gonzalez@ciens.ucv.ve}{will.all.gs@gmail.com} & & & & \textbf{Lugar:} & Online. \\
+%\vspace{0.001mm} \\
+%\textbf{Preparador:} & Wilmer Gonzalez & & &  & \textbf{Horario:} & V 9:00 -- 11:00 \\
+%\textbf{Email:} &  \href{mailto:willallgs@gmail.com}{willallgs@gmail.com} & & & & \textbf{Lugar:} & PROESA.
+\end{tabular}
+\end{minipage}
+\rule{6in}{0.4pt}
+\end{center}
+\vspace{.5cm}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\renewcommand\refname{\normalsize{Referencias bibliogr\'aficas:}}
+
+\noindent\textbf{Objectivos:}
+
+\vspace{.3cm}
+Al finalizar el curso el estudiante deberá ser capaz de:
+\begin{itemize}
+\item \textbf{Identificar} y \textbf{reconocer} problemas cuya solución sea posible mediante la aplicación de redes neuronales.
+
+\item \textbf{Diseñar} y \textbf{desarrollar} redes neuronales utilizando para ello un método adecuado.
+
+\item \textbf{Implementar} aplicaciones neuronales utilizando lenguajes y/o herramientas de desarrollo neuronales.
+
+% \item \textbf{Comprender} la teoría de conjuntos difusos, lógica difusa y su entorno de aplicaciones.
+\end{itemize}
+
+
+\vskip.15in
+\noindent\textbf{Contenido tem\'atico:}
+\begin{enumerate}
+\item \textbf{Transformers:} \textsl{Attention is all you need}. Redes neuronales recurrentes. \textsl{GRU Networks}. \textsl{LSTM Networks}. \textsl{BERT}.
+% \cite{natarajan2014machine} \cite{russell1995modern} \cite{46484} \cite{james2013introduction} \cite{abu2012learning} 
+\cite{Goodfellow:2016:DL:3086952} \cite{DBLP:journals/corr/VaswaniSPUJGKP17} \cite{DBLP:journals/corr/abs-1810-04805} \cite{Radford2018ImprovingLU} \cite{DBLP:journals/corr/abs-1802-05365} \cite{DBLP:journals/corr/abs-1801-06146}
+
+\item \textbf{Stable diffusion:} \textsl{Latent Diffusion Models}. \textsl{VQ-VAE-2}. \textsl{GANs}. 
+% Modelos no lineales. Arquitectura multicapa. Paradigma de Retropropagaci\'on del error (Backpropagation). Funciones de activación. Funciones de costo. Hiperparámetros. Variantes del algoritmo de aprendizaje. Redes neuronales de Funci\'on de Base Radial (NNRBF). Redes neuronales convolucionales. Redes neuronales recurrentes. Algoritmo de aprendizaje. 
+
+% \cite{Haykin:1994:NNC:541500} \cite{Demuth:2014:NND:2721661} \cite{Orr96introductionto} \cite{keller2016fundamentals} \cite{Patterson:2017:DLP:3169957} 
+\cite{DBLP:journals/corr/abs-2112-10752} \cite{DBLP:journals/corr/abs-1906-00446} \cite{goodfellow2020generative}
+
+\item \textbf{Zero-shot classification:} MNLI. NLU. \textsl{Stance detection}. Word2vec.
+% Aprendizaje competitivo. Mapas auto-organizativos de Kohonen. Estructura básica de la red. Función de inhibición lateral. Redes Autoencoders. Redes Generativas. Redes generativas adversarias. Radio de influencia. Aprendizaje de representación. Algoritmo de aprendizaje.
+% \cite{Haykin:1994:NNC:541500} \cite{Demuth:2014:NND:2721661} \cite{Kohonen:2001:SM:558021} \cite{Goodfellow:2016:DL:3086952}
+\cite{DBLP:journals/corr/abs-1909-00161} \cite{DBLP:journals/corr/WilliamsNB17} \cite{DBLP:journals/corr/XianLSA17}
+
+\item \textbf{MLOps:} TFX. Versionamiento de modelos. Registro de modelos. Active learning. 
+% Procesamiento digital de imágenes. Reconocimiento de voz. Procesamiento del lenguaje natural.
+% \cite{Goodfellow:2016:DL:3086952}
+\cite{DBLP:journals/corr/abs-2010-02013} \cite{sculley2015hidden} \cite{shankar2022operationalizing} \cite{borzunov2022training}
+\end{enumerate}
+
+% \newpage
+\vskip.15in
+\begin{table}[h]
+\centering
+\caption{Evaluaciones}
+\label{my-label}
+\begin{tabular}{lcccl}
+\hline
+\textbf{Tema} & \multicolumn{1}{l}{\textbf{Evaluaci\'on}} & \multicolumn{1}{l}{\textbf{Ponderaci\'on}} &  \\ \hline
+\textit{Temario completo} & Asistencia & 10\% &  \\
+\textit{Tema  \textbf{i}} & Proyecto \textbf{\textit{i}} & 20\% &  \\
+\textit{Temario completo} & Parcial & 10\% &  \\ \hline
+\end{tabular}
+\end{table}
+% \footnotetext{Downloadable ebook versions are available on AeLP.}
+\vskip.15in
+
+\newpage
+\noindent\textbf{Log\'istica:}
+\begin{itemize}
+    \item Las clases consisten en discusiones guiadas con previa revisi\'on de los art\'iculos involucrados.
+    \item Charlas especializadas (profesores invitados).
+    \item Se aceptan propuestas de temas de interés por partes de los estudiantes, con previa aprobaci\'on del instructor.
+    \item Es importante la interacción en el grupo en la clase.
+\end{itemize}
+
+\noindent\printbibliography
+%%%%%% THE END 
+\end{document} 
